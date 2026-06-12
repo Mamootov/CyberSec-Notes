@@ -1,4 +1,4 @@
-# Username enumeration via different responses
+ # Username enumeration via different responses
 
 ## Objective 
 Finding Username & Password in a vulnerable login system 

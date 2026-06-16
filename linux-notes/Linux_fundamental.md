@@ -102,7 +102,78 @@ Also read `pgrep - pkill - pidwait`.
 
 ## Networking
 
+`ip` Shows network devices, interfaces, route and addresses
+- `ip a` a: address, shows all interfaces with their status and ip
+- `ip r` r: route
+- `ip -d []` d: detail
+
+\
+`netstat` Network status, shows active connection, sockets, interface static and routes
+- `netstat -a` a: all, shows all sockets
+- `netstat -n` shows sockets numerical
+- `netstat -an` most used.
+- `netstat -r` r: route, shows route table
+- `netstat -i` i: interface
+
+\
+`ss` Similar to netstat
+- `ss -u/-t` udp/tcp 
+- `ss -l` l: listening
+- `ss -n` n: numerical
+- `ss -tlupn` listening ports, tcp and udp, numerical
+
+\
+`curl` Transfer Urls (your unautomated webbrowser) --supports many protocols
+- `curl -I` shows only headers
+- `curl -v` shows request and response with detail  
+- `curl -L` follows for redirect
+- `curl -O` saves to file
+- `curl -X [HTTP method]` http methods
+- `curl -X [URL] -d "info"` Posts "info" to URL
+- `curl -H "header: value"` adds header 
+- `curl -b "session:..."` sending cookie
+- `curl -c` downloading cookie
+- `curl -u user:pass` authenticate with user and pass --basic auth
+- `curl --proxy [URL]` send request from a proxy
+
+\
+`wget` Network downloader
+- `wget -O [file name]` saves with specefic file name
+- `wget -c` continue downloading interupted downloads
+- `wget -b` downloads in background
+- `wget -m` mirrors url(download website)
+
+\
+`ping` Pong
+- `ping -c [number]` c: counter
+- `ping -s [size]` packet size
+
+\
+`tracerout` Trace packets route
+
+\
+`dig` Shows Domain Info
+- `dig [URL]` A records
+- `dig [URL] +short` only IP
+- `dig [URL] MX NS TXT` shows MX, NS, TXT records
+- `dig @ip(dns) [URL]` use ip(dns) as dns
+
+\
+`nslookup` and `whois` are also useful tools for OSINT
+
 ## Archives
+
+`tar` Makes an archive for created files
+- `tar -czvf [archive].tar.gz dir` create archive 
+- `tar -xzvf [archive].tar.gz` extract
+- `tar -tvf [archive].tar` list contents  
+for gzip should add `-z` and for xz should add `-J`
+
+\
+`zip` zip a file or dir
+- `zip -r [archive].zip dir` zips dir to archive.zip
+- `unzip [archive].zip` unzip a file
+
 
 ## Users & Groups
 

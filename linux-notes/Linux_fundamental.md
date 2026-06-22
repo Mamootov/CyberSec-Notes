@@ -82,6 +82,7 @@ owner-group-other
 
 ## Processes
 
+
 `ps` List current procesors.
 - `ps aux` Every processor with BSD syntax
 - `ps -U [user group]` processor for user group
